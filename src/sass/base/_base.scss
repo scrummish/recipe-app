@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include responsive(tablet-landscape) { // width < 1200
+    font-size: 56.25%; //1 rem = 9px
+  }
+  @include responsive(tablet-portrait) { // width < 900
+    font-size: 50%; //1 rem = 8px
+  }
+  @include responsive(large-desktop) {
+    font-size: 75%; //1rem = 12
+  }
+
+  font-size: 62.5%; //1 rem = 10px; based on 16px defaults
+}
+
+body {
+  @include responsive(tablet-portrait) { // width < 900
+    padding: 0;
+  }
+  background-color: $color-white;
+  box-sizing: border-box;
+  padding: 2.5rem;
+}
