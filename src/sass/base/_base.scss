@@ -16,15 +16,14 @@ html {
   @include responsive(large-desktop) {
     font-size: 75%; //1rem = 12
   }
-
+  background-color: $color-white;
   font-size: 62.5%; //1 rem = 10px; based on 16px defaults
 }
 
 body {
   @include responsive(tablet-portrait) { // width < 900
-    padding: 0;
+    padding: 1rem;
   }
-  background-color: $color-white;
   box-sizing: border-box;
   padding: 2.5rem;
 }
