@@ -1,3 +1,11 @@
-<p>
-  shopping-list works!
-</p>
+<section class="card card--secondary">
+  <h2>Shopping List</h2>
+  <ul>
+    <a
+      href="#"
+      style="cursor: pointer"
+      *ngFor="let ingredient of ingredients">
+      {{ingredient.name}} ({{ingredient.amount}})
+    </a>
+  </ul>
+</section>

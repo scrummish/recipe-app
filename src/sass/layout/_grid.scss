@@ -8,10 +8,7 @@
     }
     margin-bottom: $row-space;
   }
-  @include responsive(tablet-portrait) {
-    max-width: 50rem;
-    padding: 0 3rem;
-  }
+  
   @include clear-fix;
 
   [class^='col-'] { // Every column 

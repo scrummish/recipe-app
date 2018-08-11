@@ -1,0 +1,23 @@
+.card {
+  background-color: $color-white;
+  border: 1px solid $color-black;
+  border-radius: 8px;
+  box-shadow: 0 0 33px $color-shadow;
+  padding: 2em;
+
+  &--primary {
+    border-color: $color-primary;
+  }
+
+  &--secondary {
+    border-color: $color-secondary;
+  }
+
+  &--tertiary {
+    border-color: $color-tertiary;
+  }
+
+  // &--small {
+  //   min-height: 150px;
+  // }
+}
