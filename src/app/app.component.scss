@@ -1,9 +1,5 @@
 @import '../sass/main';
 
-main {
-    background-color: aqua;
-
-    & .col-1-of-2{
-        background-color: bisque;
-    }
+.app-main {
+    background-color: $color-primary;
 }

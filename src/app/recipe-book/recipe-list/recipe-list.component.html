@@ -1,3 +1,11 @@
-<p>
-  recipe-list works!
-</p>
+<a 
+  href="#"
+  *ngFor="let recipe of recipes;">
+    <h4>{{ recipe.name }}</h4>
+    <p>{{ recipe.description }}/p>
+    <img 
+      [src]="recipe.imagePath" 
+      [alt]="recipe.name"
+      style="max-width: 100%"
+      >
+  </a>
