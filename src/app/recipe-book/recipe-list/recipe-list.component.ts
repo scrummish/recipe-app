@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 import { Recipe } from '../recipe.model';
 
@@ -8,16 +8,22 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
   // Recipe() Class takes a name, description, and image url all type string 
-  @Input() recipes: Recipe[] = [
+  recipes: Recipe[] = [
     new Recipe('Green Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' ),
-    new Recipe('Green Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' ),
-    new Recipe('Green Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' )
+    new Recipe('yellow Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' ),
+    new Recipe('blue Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' )
   ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectedRecipe(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe);
   }
 
 }
