@@ -26,3 +26,26 @@ body {
   box-sizing: border-box;
   padding: 2.5rem;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+li {
+  list-style-type: none;
+}

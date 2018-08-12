@@ -8,6 +8,8 @@
   &--recipe-card {
     background-color: $color-primary;
     padding: 2.5em;
+    border-radius: 4rem;
+    overflow: hidden;
 
     &::after {
       content: "";

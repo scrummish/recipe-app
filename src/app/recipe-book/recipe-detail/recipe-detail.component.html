@@ -4,12 +4,13 @@
       <!-- <figure class="recipe-details__img-shape">
           <img [src]="recipe.imagePath" [alt]="recipe.name" style="width: 100%">
       </figure> -->
-      <ul>
-        <li>
-          <button>Delete</button>
-        </li>
-        <li><button>edit</button></li>
-      </ul>
+      <div class="recipe-details__nav">
+        <button class="btn btn--flat" type="button" (click)="deleteRecipe()">
+          <fa-icon [icon]="faTrashAlt"></fa-icon>
+        </button>
+        <button class="btn btn--flat" type="button" (click)="editRecipe()"><fa-icon
+            [icon]="faEdit"></fa-icon></button>
+      </div>
       <h3 class="heading-tertiary">{{recipe.name}} Recipe</h3>
     </div>
   </div>
