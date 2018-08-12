@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body {
+  color: $color-black;
+  font-family: $font-family-default;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: $heading-letter-spacing;
+  margin-bottom: .5em;
+}
+
+.heading-tertiary {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: $heading-letter-spacing;
+  margin-bottom: .3em;
+}
+
+.paragraph {
+  font-size: $font-size-default;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
