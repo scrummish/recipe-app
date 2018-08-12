@@ -16,7 +16,8 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelected() {
+  onSelected(e) {
+    e.preventDefault();
     this.recipeSelected.emit();
   }
 

@@ -1,6 +1,8 @@
 <label for="name"></label>
-<input type="text" id="name">
+<input type="text" id="name" #name>
 <label for="amount"></label>
-<input type="number" id="amount">
+<input type="number" id="amount" #amount>
+
+<button type="submit" (click)="onAdd()"></button>
 
 <!-- add delete and clear buttons -->

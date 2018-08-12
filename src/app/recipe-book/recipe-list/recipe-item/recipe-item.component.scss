@@ -1,0 +1,13 @@
+.recipe-item {
+    &__img-shape {
+        clip-path: circle(70% at -20% 50%);
+        float: left;
+
+        -webkit-shape-outside: circle(70% at -15% 50%);
+        shape-outside: circle(70% at -15% 50%);
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

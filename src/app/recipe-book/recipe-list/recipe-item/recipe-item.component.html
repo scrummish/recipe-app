@@ -1,11 +1,12 @@
-<a
-  href="#"
-  (click)="onSelected()"
-  >
-  <h4>{{ recipe.name }}</h4>
-  <p>{{ recipe.description }}</p>
-  <img
-    [src]="recipe.imagePath"
-    [alt]="recipe.name"
-    style="max-width: 100%">
-</a>
+<div class="recipe-item row card card--secondary" (click)="onSelected($event)">
+  <div class="col-1-of-1">
+    <a
+      href="#">
+      <figure class="recipe-item__img-shape">
+        <img class="recipe-item__img" [src]="recipe.imagePath" [alt]="recipe.name">
+      </figure>
+      <h3 class="">{{recipe.name}} Recipe</h3>
+      <p>{{ recipe.description }}</p>
+    </a>
+  </div>
+</div>
