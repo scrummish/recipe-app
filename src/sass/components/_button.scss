@@ -1,20 +1,36 @@
 .btn {
     display: block;
+    border-radius: 50%;
+    color: $color-white;
     
     &--flat {
-        color: $color-white;
-        font-size: 2rem;
         margin-bottom: 3rem;
+        margin-left: -.31rem;
         width: 4.5rem;
         height: 4.5rem;
-        margin-left: -.31rem;
-        border-radius: 50%;
+        font-size: 2rem;
 
         &:hover {
-            background-color: $color-secondary;
+            background-color: $color-tertiary;
             box-shadow: 0 1rem 3rem $color-shadow;
 
             // to do make button animation smooth on hover
+        }
+    }
+
+    &--add {
+        background-color: $color-secondary;
+        font-size: 3.5rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 1rem;
+        position: absolute;
+        right: 2.5rem;
+        bottom: 15rem;
+
+        &:hover {
+            box-shadow: 0 1rem 3rem $color-shadow;
+            // to do make button animation smooth on hover and scale it up a lil
         }
     }
 }
