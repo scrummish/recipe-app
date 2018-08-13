@@ -1,31 +1,26 @@
 <section class="card card--recipe-card">
-  <div class="row recipe-details recipe-details__text">
-    <div class="col-1-of-1">
-      <!-- <figure class="recipe-details__img-shape">
-          <img [src]="recipe.imagePath" [alt]="recipe.name" style="width: 100%">
-      </figure> -->
-      <div class="recipe-details__nav">
-        <button class="btn btn--flat" type="button" (click)="editRecipe()"><fa-icon
-            [icon]="faShare"></fa-icon></button>
-        <button class="btn btn--flat" type="button" (click)="editRecipe()"><fa-icon
-            [icon]="faEdit"></fa-icon></button>
-            <button class="btn btn--flat" type="button" (click)="deleteRecipe()">
-                <fa-icon [icon]="faTrashAlt"></fa-icon>
-              </button>
-      </div>
-      <h3 class="heading-tertiary">{{recipe.name}} Recipe</h3>
+  <div class="recipe recipe__text">
+    <div class="recipe__nav">
+      <button 
+        class="recipe__btn btn btn--round" 
+        type="button" 
+        (click)="shareRecipe()"><fa-icon [icon]="faShare"></fa-icon></button>
+      <button 
+        class="recipe__btn btn btn--round" 
+        type="button" 
+        (click)="editRecipe()"><fa-icon [icon]="faEdit"></fa-icon></button>
+      <button 
+        class="recipe__btn btn btn--round" 
+        type="button" 
+        (click)="deleteRecipe()"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
     </div>
-    <button class="btn btn--add" type="button" (click)="editRecipe()">+</button>
+    <h3 class="heading-tertiary">{{recipe.name}} Recipe {{recipe.description}}</h3>
+    <button 
+      class="recipe__add-recipe-btn btn btn--add btn--round" 
+      type="button" 
+      (click)="addRecipe()">+</button>
   </div>
-  <!-- 
-  <div class="row">
-    <div class="col-1-of-1">
-      {{recipe.description}}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-1-of-1">
-      ingredients
-    </div>
-  </div> -->
 </section>
+    <!-- <figure class="recipe-details__img-shape"> Make this a slideshow
+      <img [src]="recipe.imagePath" [alt]="recipe.name" style="width: 100%">
+    </figure> -->

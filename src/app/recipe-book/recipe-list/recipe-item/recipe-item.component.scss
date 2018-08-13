@@ -1,4 +1,11 @@
+@import '../../../../sass/main';
+
 .recipe-item {
+    @include clear-fix;
+    
+    background-color: $color-tertiary;
+    margin-bottom: 2rem;
+
     &__img-shape {
         clip-path: circle(70% at -20% 50%);
         float: left;

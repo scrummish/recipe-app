@@ -1,40 +1,49 @@
 .card {
   background-color: $color-white;
+  border: 1px solid transparent;
   border-radius: 8px;
   box-shadow: 0 0 33px $color-shadow;
+  overflow: hidden;
+  padding: 2.5em;
   position: relative;
   z-index: 0;
 
+  // ***************************************
+  // ***** Styling for the recipe-card *****
+  // ***************************************
+
   &--recipe-card {
     background-color: $color-primary;
-    padding: 2.5em;
     border-radius: 4rem;
     overflow: hidden;
 
+    // This ::after pseudo element is used to create the white shape on the recipe card
     &::after {
-      content: "";
       background-color: $color-white;
+      clip-path: inset(0 0 12rem 8rem round 0% 0% 0% 180px);
+      content: '';
+      height: 100%;
       position: absolute;
       right: 0;
       top: 0;
       width: 100%;
-      height: 100%;
-      -webkit-clip-path: inset(0 0 12rem 8rem round 0% 0% 0% 180px);
-      clip-path: inset(0 0 12rem 8rem round 0% 0% 0% 180px);
       z-index: -1;
     }
   }
 
+  // ***************************************
+  // ***** Card's Border Colors ************
+  // ***************************************
+
   &--primary {
-    background-color: $color-primary;
-    border-color: $color-primary;
+    border-color: $color-primary-transparent;
   }
 
   &--secondary {
-    border-color: $color-secondary;
+    border-color: $color-secondary-transparent;
   }
 
   &--tertiary {
-    border-color: $color-tertiary;
+    border-color: $color-tertiary-transparent;
   }
 }

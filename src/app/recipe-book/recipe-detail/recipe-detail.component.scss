@@ -1,8 +1,21 @@
-.recipe-details {
-    &__nav {
-        margin-left: -.3rem;
-    }
-    &__text {
-        height: 50rem;
-    }
+.recipe {
+  &__nav {
+    margin-left: -.3rem;
+  }
+
+  &__text {
+    height: 50rem;
+  }
+
+  &__btn {
+    margin-bottom: 3rem;
+    margin-left: -.31rem;
+  }
+
+  // Positions the add recipe button
+  &__add-recipe-btn {
+    bottom: 15rem;
+    position: absolute;
+    right: 2.5rem;
+  }
 }
