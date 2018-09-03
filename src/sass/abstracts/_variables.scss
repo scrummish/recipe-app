@@ -14,6 +14,7 @@ $color-off-white: rgba(243, 249, 251, .7);
 $color-error: #f00;
 $color-success: #0f0;
 $color-shadow: rgba($color-black, .2);
+$color-font: #9691a6;
 
 //Grid Values
 $grid-width: 114rem;
@@ -27,3 +28,7 @@ $font-family-default: 'Nunito', sans-serif;
 
 // Typography Values
 $heading-letter-spacing: .1rem;
+
+// Card Values
+$left-side-width: 8rem;
+$card-padding: 2.5rem;

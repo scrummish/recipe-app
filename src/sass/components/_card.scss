@@ -4,7 +4,7 @@
   border-radius: 8px;
   box-shadow: 0 0 33px $color-shadow;
   overflow: hidden;
-  padding: 2.5em;
+  padding: $card-padding;
   position: relative;
   z-index: 0;
 
@@ -20,7 +20,7 @@
     // This ::after pseudo element is used to create the white shape on the recipe card
     &::after {
       background-color: $color-white;
-      clip-path: inset(0 0 12rem 8rem round 0% 0% 0% 180px);
+      clip-path: inset(0 0 12rem $left-side-width round 0% 0% 0% 180px);
       content: '';
       height: 100%;
       position: absolute;

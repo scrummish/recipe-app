@@ -1,26 +1,26 @@
-<section class="card card--recipe-card">
-  <div class="recipe recipe__text">
-    <div class="recipe__nav">
-      <button 
-        class="recipe__btn btn btn--round" 
-        type="button" 
-        (click)="shareRecipe()"><fa-icon [icon]="faShare"></fa-icon></button>
-      <button 
-        class="recipe__btn btn btn--round" 
-        type="button" 
-        (click)="editRecipe()"><fa-icon [icon]="faEdit"></fa-icon></button>
-      <button 
-        class="recipe__btn btn btn--round" 
-        type="button" 
-        (click)="deleteRecipe()"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
-    </div>
-    <h3 class="heading-tertiary">{{recipe.name}} Recipe {{recipe.description}}</h3>
-    <button 
-      class="recipe__add-recipe-btn btn btn--add btn--round" 
-      type="button" 
-      (click)="addRecipe()">+</button>
+<section class="card card--recipe-card recipe recipe__text">
+  <h3 class="recipe__heading heading-tertiary">{{recipe.name}}</h3>
+  <div class="recipe__nav">
+    <button
+      class="recipe__btn btn btn--round"
+      type="button"
+      (click)="shareRecipe()"><fa-icon [icon]="faShare"></fa-icon></button>
+    <button
+      class="recipe__btn btn btn--round"
+      type="button"
+      (click)="editRecipe()"><fa-icon [icon]="faEdit"></fa-icon></button>
+    <button
+      class="recipe__btn btn btn--round"
+      type="button"
+      (click)="deleteRecipe()"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
   </div>
+  <button
+    class="recipe__add-recipe-btn btn btn--add btn--round"
+    type="button"
+    (click)="addRecipe()">+</button>
+  {{recipe.description}} hfdhgfjcgkfjhgkjh.kghjfhgdfhgfjhgkhj
 </section>
-    <!-- <figure class="recipe-details__img-shape"> Make this a slideshow
+
+<!-- <figure class="recipe-details__img-shape"> Make this a slideshow
       <img [src]="recipe.imagePath" [alt]="recipe.name" style="width: 100%">
     </figure> -->

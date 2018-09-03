@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 import { Ingredient } from '../../shared/ingredient.model';
 
@@ -8,6 +8,10 @@ import { Ingredient } from '../../shared/ingredient.model';
   styleUrls: ['./shopping-list-edit.component.scss']
 })
 export class ShoppingListEditComponent implements OnInit {
+  // Viewchild is being used to grab the local reference from the element
+  @ViewChild('name') nameInputReference: ElementRef;
+  @ViewChild('amount') amountInputReference: ElementRef;
+
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   constructor() { }
@@ -16,9 +20,14 @@ export class ShoppingListEditComponent implements OnInit {
   }
 
   onAddItem() {
-    const ingredientName: string = 'fsd';
-    const ingredientAmount: number = 5; 
-    const newIngredient = new Ingredient(ingredientName,5);
+    const ingredientName = this.nameInputReference.nativeElement.value;
+    const ingredientAmount = this.amountInputReference.nativeElement.value;
+    const newIngredient = new Ingredient(ingredientName,ingredientAmount);
+    this.ingredientAdded.emit(newIngredient);
+  }
+
+  onAdd(tester) {
+    console.log(tester);
   }
 
 }

@@ -1,4 +1,12 @@
+@import '../../../sass/main';
+
 .recipe {
+
+  &__heading {
+    color: $color-font;
+    // Keeps the heading's left margin at a distance equal to the left sides width
+    margin-left: calc(#{$left-side-width} + (#{$left-side-width - $card-padding}));
+  }
   &__nav {
     margin-left: -.3rem;
   }
