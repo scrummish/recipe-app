@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output} from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe-book.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -8,22 +8,11 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
+  recipes: Recipe[];
 
-  // Recipe() Class takes a name, description, and image url all type string 
-  recipes: Recipe[] = [
-    new Recipe('Green Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' ),
-    new Recipe('yellow Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' ),
-    new Recipe('blue Spaghetti', 'Creamy spaghetti', 'https://hips.hearstapps.com/del.h-cdn.co/assets/18/04/1517007351-delish-kids-rainbow-spaghetti-001.jpg' )
-  ];
-
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
+    this.recipes = this.recipeService.getRecipes();
   }
-
-  selectedRecipe(recipe: Recipe) {
-    this.recipeWasSelected.emit(recipe);
-  }
-
 }
