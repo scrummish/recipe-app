@@ -11,6 +11,7 @@ import { RecipeItemComponent } from './recipe-book/recipe-list/recipe-item/recip
 import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
